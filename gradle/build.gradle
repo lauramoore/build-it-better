@@ -1,0 +1,48 @@
+// Test build script for build-it-better gradle code
+// 
+// This project has three modules to demonstrate some of Gradle's features.
+// All three were generated using the gradle init --type {library type} plugin
+// so I didn't have to stub out all of the directories, code and build.gradle.
+//
+// simpleGroovyModule is a stand-alone chunk of code written in Groovy.  It can
+// be compiled and used independently of the other two modules.
+//
+// dependencyScalaModule is intended as a library for the Java project.  It can
+// be compiled and tested independently of the other two modules but
+// presumably won't do much without the Java module to use it.
+//
+// complexJavaModule is a module that consumes dependencyScalaModule as a 
+// library.  This means it requires dependencyScalaModule to compile as well
+// as to execute its test cases.  Changes in dependencyScalaModule will force
+// a recompile of complexJavaModule but not vice versa.
+//
+//
+//
+// One neat feature of Gradle is access to the Directed Acyclic Graph (DAG)
+// of tasks that will be executed.  You can access the DAG during both the 
+// execution phase of Gradle with some examples as follows:
+
+// if execution includes the 'compileScala' task let us know
+gradle.taskGraph.whenReady {taskGraph ->
+  if (taskGraph.hasTask(':dependencyScalaModule:compileJava')) {
+    println 'This execution run includes Scala!'
+  }
+}
+
+// Here's a debugging example for trying to troubleshoot a build issue.  If
+// you don't know when a particular directory is populated you can attach
+// a doLast to every task to check for it and halt execution at that point.
+// only do this if debug was set as project property
+if (project.hasProperty('debug')) {
+  gradle.taskGraph.whenReady { taskGraph ->
+    taskGraph.getAllTasks().each {Task t ->
+      t.doLast{
+        if (file('complexJavaModule/build/libs').exists())
+        {
+          println "Found it in task $t"
+          throw new GradleException('stop running')
+        }
+      }
+    }
+  }
+}
