@@ -1,4 +1,8 @@
 .gradle/
-simpleGroovyModule/build/
-complexJavaModule/build/
-dependencyScalaModule/build/
+simpleGroovy/build/
+complexJava/build/
+dependencyScala/build/
+build/
+buildSrc/build/
+build-it-better.*
+**/*.iml
