@@ -25,6 +25,16 @@
         <artifactId>javascript-maven-plugin</artifactId>
         <version>1.1-softec</version>
         <extensions>true</extensions>
+        <executions>
+          <execution>
+             <goals>
+               <goal>war-package</goal>
+               <goal>prepare-jsunit-tests</goal>
+               <goal>jsunit</goal>
+               <goal>compress</goal>
+            </goals>
+          </execution>
+        </executions>
         <configuration>
         </configuration>
       </plugin>
