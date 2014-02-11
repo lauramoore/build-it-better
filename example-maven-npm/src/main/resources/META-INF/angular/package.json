@@ -1,0 +1,33 @@
+{
+  "name": "angular",
+  "version": "1.2.10",
+  "description": "AngularJS provided as a CommonJS module. Compiled with jsdom when running in Node. Useful for client-side apps built with Browserify and for testing AngularJS code in Node without depending on a browser.",
+  "main": "index.js",
+  "browser": "index-browserify.js",
+  "scripts": {
+    "test": "tape test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/bclinkinbeard/angular.git"
+  },
+  "keywords": [
+    "angular",
+    "angularjs",
+    "commonjs",
+    "require",
+    "testing"
+  ],
+  "author": {
+    "name": "Ben Clinkinbeard",
+    "email": "ben.clinkinbeard@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "jsdom": "~0.8.8"
+  },
+  "devDependencies": {
+    "tape": "~2.1.0",
+    "request": "~2.30.0"
+  }
+}

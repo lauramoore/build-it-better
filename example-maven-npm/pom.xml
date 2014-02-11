@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>github.lauramoore.builditbetter</groupId>
+  <artifactId>example-maven-npm</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>example-maven-npm Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>mulesoft-releases</id>
+      <name>MuleSoft Snapshot Repository</name>
+      <url>https://repository.mulesoft.org/releases/</url>
+      <layout>default</layout>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <build>
+    <finalName>example-maven-npm</finalName>
+    <plugins>
+    <plugin>
+       <groupId>org.mule.tools.javascript</groupId>
+       <artifactId>npm-maven-plugin</artifactId>
+       <version>1.0</version>
+       <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <goals>
+               <goal>fetch-modules</goal>
+            </goals>
+            <configuration>
+              <packages>
+                 <package>angular:1.2.10</package>
+              </packages>
+              </configuration>
+            </execution>
+       </executions>
+    </plugin>
+  </plugins>
+  </build>
+</project>
