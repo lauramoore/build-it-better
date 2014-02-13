@@ -1,3 +1,10 @@
+/*
+Copyright (c) 2014, Marty Blood <martyblood@rightbox.com>
+
+Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ */
 // Test build script for build-it-better gradle code
 // 
 // This sample has three sub-projects to demonstrate some of Gradle's features.
@@ -71,7 +78,8 @@ apply plugin: 'idea'
 apply plugin: 'groovy'
 
 // include the gradleApi as a compile dependency so IDEA will include that
-// properly for the buildSrc directory
+// properly for the buildSrc directory - this isn't ACTUALLY required to
+// build the applications
 dependencies {
     compile gradleApi()
 }
@@ -88,5 +96,18 @@ task myTask(type: MyCustomTask)
     task "task$i" << { println "I'm task # $i"}
 }
 task0.dependsOn task1, task2, task3
-// just for fun comment out the following line and run the script
+// just for fun comment out the following line and run the build to see an
+// example of how Gradle detects cyclic dependencies
 // task1.dependsOn task0
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Gradle can integrate existing Ant build files and consume the tasks from
+// them.  Ant targets are added to the Gradle tasks and can be manipulated
+// seamlessly like other Gradle tasks.
+ant.importBuild 'anttasks.xml'
+
+// now we can use any of the Ant targets as Gradle tasks
+MyFancyAntTask.doLast {
+    println "This is from Gradle."
+}

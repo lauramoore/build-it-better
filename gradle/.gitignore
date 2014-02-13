@@ -6,3 +6,5 @@ build/
 buildSrc/build/
 build-it-better.*
 **/*.iml
+out/
+gradle-app.setting
