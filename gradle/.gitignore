@@ -2,9 +2,15 @@
 simpleGroovy/build/
 complexJava/build/
 dependencyScala/build/
+simpleGroovy/bin/
+complexJava/bin/
+dependencyScala/bin/
 build/
 buildSrc/build/
 build-it-better.*
 **/*.iml
 out/
 gradle-app.setting
+.project
+.classpath
+.settings/
