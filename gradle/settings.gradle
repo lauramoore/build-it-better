@@ -1,2 +1,2 @@
 rootProject.name = 'build-it-better'
-include 'simpleGroovy', 'dependencyScala','complexJava','javascriptProgram','javascriptLibrary'
+include 'simpleGroovy', 'dependencyScala','simpleJava','complexJava','javascriptProgram','javascriptLibrary'
