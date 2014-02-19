@@ -14,5 +14,14 @@
   ],
   "dependencies": {
     "angular": "~1.2.6"
-  }
+  },
+  "homepage": "https://github.com/SonicWizard/build-it-better",
+  "description": "Sample files for DevNexus 2014 presentation",
+  "keywords": [
+    "build",
+    "javascript",
+    "bower",
+    "grunt"
+  ],
+  "license": "ISC"
 }

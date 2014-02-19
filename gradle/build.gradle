@@ -1,30 +1,37 @@
+/*
+Copyright (c) 2014, Marty Blood <martyblood@rightbox.com>
+
+Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ */
 // Test build script for build-it-better gradle code
 // 
-// This project has three modules to demonstrate some of Gradle's features.
+// This sample has three sub-projects to demonstrate some of Gradle's features.
 // All three were generated using the gradle init --type {library type} plugin
 // so I didn't have to stub out all of the directories, code and build.gradle.
 //
-// simpleGroovyModule is a stand-alone chunk of code written in Groovy.  It can
-// be compiled and used independently of the other two modules.
+// simpleGroovy is a stand-alone chunk of code written in Groovy.  It can
+// be compiled and used independently of the other two sub-projects.
 //
-// dependencyScalaModule is intended as a library for the Java project.  It can
-// be compiled and tested independently of the other two modules but
-// presumably won't do much without the Java module to use it.
+// dependencyScala is intended as a library for the Java project.  It can
+// be compiled and tested independently of the other two sub-projects but
+// presumably won't do much without the Java project to use it.
 //
-// complexJavaModule is a module that consumes dependencyScalaModule as a 
-// library.  This means it requires dependencyScalaModule to compile as well
-// as to execute its test cases.  Changes in dependencyScalaModule will force
-// a recompile of complexJavaModule but not vice versa.
-//
-//
-//
+// complexJava is a sub-project that consumes dependencyScala as a 
+// library.  This means it requires dependencyScala to compile as well
+// as to execute its test cases.  Changes in dependencyScala will force
+// a recompile of complexJava but not vice versa.
+
+
+///////////////////////////////////////////////////////////////////////////////
 // One neat feature of Gradle is access to the Directed Acyclic Graph (DAG)
 // of tasks that will be executed.  You can access the DAG during both the 
 // execution phase of Gradle with some examples as follows:
 
 // if execution includes the 'compileScala' task let us know
 gradle.taskGraph.whenReady {taskGraph ->
-  if (taskGraph.hasTask(':dependencyScalaModule:compileJava')) {
+  if (taskGraph.hasTask(':dependencyScala:compileJava')) {
     println 'This execution run includes Scala!'
   }
 }
@@ -37,7 +44,7 @@ if (project.hasProperty('debug')) {
   gradle.taskGraph.whenReady { taskGraph ->
     taskGraph.getAllTasks().each {Task t ->
       t.doLast{
-        if (file('complexJavaModule/build/libs').exists())
+        if (file('complexJava/build/libs').exists())
         {
           println "Found it in task $t"
           throw new GradleException('stop running')
@@ -45,4 +52,62 @@ if (project.hasProperty('debug')) {
       }
     }
   }
+}
+
+// Here's a canonical example from the Gradle user guide.
+// http://www.gradle.org/docs/current/userguide/tutorial_using_tasks.html
+// Change the version used elsewhere based on whether or not release is
+// included in the task graph
+gradle.taskGraph.whenReady {taskGraph ->
+    if (taskGraph.hasTask(release)) {
+        ext.version = '0.1.0'
+    } else {
+        ext.version = '0.1.0-SNAPSHOT'
+    }
+
+    println "Using version '${ext.version}'"
+}
+
+task release
+
+
+///////////////////////////////////////////////////////////////////////////////
+// apply the IDEA plugin so we can have Gradle auto-generate the IDEA IDE files
+// for us.  There are also plugins for Eclipse and Netbeans if you look online.
+apply plugin: 'idea'
+apply plugin: 'groovy'
+
+// include the gradleApi as a compile dependency so IDEA will include that
+// properly for the buildSrc directory - this isn't ACTUALLY required to
+// build the applications
+dependencies {
+    compile gradleApi()
+}
+
+// include a custom task from our buildSrc so we can debug this in IDEA
+task myTask(type: MyCustomTask)
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Gradle can also generate tasks on the fly.  Here's a simple example of that
+// from the Gradle user manual:
+// http://www.gradle.org/docs/current/userguide/tutorial_using_tasks.html
+4.times { i ->
+    task "task$i" << { println "I'm task # $i"}
+}
+task0.dependsOn task1, task2, task3
+// just for fun comment out the following line and run the build to see an
+// example of how Gradle detects cyclic dependencies
+// task1.dependsOn task0
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Gradle can integrate existing Ant build files and consume the tasks from
+// them.  Ant targets are added to the Gradle tasks and can be manipulated
+// seamlessly like other Gradle tasks.
+ant.importBuild 'anttasks.xml'
+
+// now we can use any of the Ant targets as Gradle tasks
+MyFancyAntTask.doLast {
+    println "This is from Gradle."
 }
