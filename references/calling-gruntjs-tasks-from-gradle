@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Calling GruntJS tasks from Gradle - Ted Naleid</title>
+  <meta name="author" content="Ted Naleid">
+
+  
+  <meta name="description" content="Gradle is a great build tool with a large community for developing JVM-based applications, but one area that it seems to be lacking strong support is &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://naleid.com/blog/2013/01/24/calling-gruntjs-tasks-from-gradle">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Ted Naleid" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css'>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5332279-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:naleid.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Ted Naleid</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/blog/contact">Contact</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+  
+    
+      <h1 class="entry-title">Calling GruntJS Tasks From Gradle</h1>
+    
+  
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-24T00:00:00-06:00" pubdate data-updated="true">Jan 24<span>th</span>, 2013</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Gradle is a great build tool with a large community for developing JVM-based applications, but one area that it seems to be lacking strong support is in front-end tooling.  The Node.js community&rsquo;s strength is front-end tooling with a number of very nice build tools including <a href="http://gruntjs.com">Grunt</a>, <a href="http://yeoman.io">Yeoman</a> and <a href="http://brunch.io">Brunch</a>.</p>
+
+<p>There are a couple of Gradle plugins that people have created around JavaScript and CSS processing, but even the authors of those plugins seem to have punted and moved to node.js-based tools for front-end work.</p>
+
+<p>I&rsquo;m using Grunt on my latest project to help out with packaging, minification, and concatenating files (all through RequireJS&rsquo;s <a href="http://requirejs.org/docs/optimization.html">r.js optimization</a>), linting (through <a href="http://www.jshint.com/">JSHint</a>) and css pre-processing (via <a href="http://lesscss.org/">LESS</a>).</p>
+
+<p>I wanted a way for our build process to be able to assemble our <code>.war</code> files in a single step so I needed to figure out how to weld these two tools together.</p>
+
+<p>The quick and dirty way of doing it would just be to either hard code some <code>&ldquo;grunt&rdquo;.execute().text</code> lines, or to have each grunt task be an <code>Exec</code> task:</p>
+
+<pre lang="groovy">
+task requirejs(type: Exec) {
+    commandLine 'grunt', 'requirejs'
+}
+</pre>
+
+
+<p>One other limitation that we had was that some of our developers (and our build machine slaves) are on Windows boxes, and other developers are using OSX.  On Windows, the <code>grunt</code> command is spelled <code>grunt.cmd</code> and once I started having to repeat OS checks everywhere things started to feel less DRY and more hacky.</p>
+
+<p>After a little research, I was able to figure out how to create a custom Gradle <code>Exec</code> subclass that keeps things clean:</p>
+
+<pre lang="groovy">
+import org.apache.tools.ant.taskdefs.condition.Os
+import org.gradle.api.tasks.Exec
+
+...
+
+task requirejs(type: GruntTask) {
+    gruntArgs = "requirejs"
+}
+
+task jslint(type: GruntTask) {
+    gruntArgs = "lint"
+}
+
+...
+
+class GruntTask extends Exec {
+    private String gruntExecutable = Os.isFamily(Os.FAMILY_WINDOWS) ? "grunt.cmd" : "grunt"
+    private String switches = "--no-color"
+
+    String gruntArgs = "" 
+
+    public GruntTask() {
+        super()
+        this.setExecutable(gruntExecutable)
+    }
+
+    public void setGruntArgs(String gruntArgs) {
+        this.args = "$switches $gruntArgs".trim().split(" ") as List
+    }
+}
+</pre>
+
+
+<p>You can either put the <code>GruntTask</code> class directly in your <code>build.gradle</code> file (where it won&rsquo;t have a package) or else in a directory under <code>buildSrc/src/main/groovy</code> where it should automatically be included in your build.  It&rsquo;s probably better for organization purposes to have it in <code>buildSrc</code>, but there seems to be a performance impact to gradle needing to check that directory is current all the time.</p>
+
+<p>With the <code>GruntTask</code> class in place, you can treat your Grunt tasks just like Gradle tasks, including making things like your <code>war</code> task depend on <code>requirejs</code> running first, or you can pass your tasks in explicitly:</p>
+
+<pre lang="bash">
+gradle clean lint requirejs war
+</pre>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Ted Naleid</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-24T00:00:00-06:00" pubdate data-updated="true">Jan 24<span>th</span>, 2013</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://naleid.com/blog/2013/01/24/calling-gruntjs-tasks-from-gradle/" data-via="tednaleid" data-counturl="http://naleid.com/blog/2013/01/24/calling-gruntjs-tasks-from-gradle/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/10/29/overriding-backbone-js-sync-to-allow-cross-origin-resource-sharing-cors/" title="Previous Post: Overriding Backbone.js sync to allow Cross Origin Resource Sharing (CORS) withCredentials">&laquo; Overriding Backbone.js sync to allow Cross Origin Resource Sharing (CORS) withCredentials</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/05/22/saving-json-client-side-to-an-s3-bucket/" title="Next Post: Saving JSON client-side to an S3 bucket">Saving JSON client-side to an S3 bucket &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/01/30/auto-refreshing-grails-applications-that-leverage-the-grails-resources-plugin/">Auto-Refreshing Grails Applications That Leverage the Grails Resources Plugin</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/12/12/functional-reactive-programming-presentation/">Functional Reactive Programming Presentation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/29/how-to-use-p4merge-as-a-3-way-merge-tool-with-git-and-tower-dot-app/">How to use p4merge as a 4-pane, 3-way merge tool with Git and Tower.app</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/17/embedding-a-groovy-web-console-in-a-java-spring-app/">Embed a Groovy Web Console in a Java Spring App</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/07/using-applescript-to-create-an-application-open-directory-with-sublime-text/">Using AppleScript to Create an "Application" for Opening a Directory with SublimeText</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Ted Naleid <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'tednaleid';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://naleid.com/blog/2013/01/24/calling-gruntjs-tasks-from-gradle/';
+        var disqus_url = 'http://naleid.com/blog/2013/01/24/calling-gruntjs-tasks-from-gradle/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,10 +1,10 @@
 #+TITLE: AngularJS web application phone cat with yeoman
 #+AUTHOR: Jose Miguel Martinez Carrasco
+#+AUTHOR: Laura Moore
 
 * Description
 
 This is a re-implementation of the [[https://github.com/angular/angular-phonecat][Google's angularjs tutorial]].
-
 * Dependencies
 
 #+BEGIN_SRC bash
@@ -15,11 +15,7 @@ npm install -g generator-angular
 npm install -g karma
 #+END_SRC
 
-If you need to install compass:
-
-#+BEGIN_SRC bash
-gem update --system && gem install compass
-#+END_SRC
+Change from originial: no longer using Compass instead Less via npm recess
 
 * Set up
 
