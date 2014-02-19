@@ -1,5 +1,5 @@
 var Hello = new function() {
-    var say = function() {
+    this.say = function() {
         if (new Library().doSomething()) {
             return 'Hello World'
         }

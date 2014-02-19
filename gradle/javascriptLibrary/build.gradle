@@ -10,24 +10,32 @@ buildscript {
 
 apply plugin: 'js'
 
+configurations{
+    jsLib
+}
+
 javascript.source {
-    prod {
-        js {
-            srcDir "/src/main/javascript/"
-            include "*.js"
-        }
+    main {
+       js {
+           srcDir = '/src/main/javascript'
+           include '*.js'
+       }
     }
 }
 
 task combinejs(type: com.eriwen.gradle.js.tasks.CombineJsTask) {
-    source = javascript.source.prod.js.files
+    source = javascript.source.main.js
 
-    dest = file("${buildDir}/all.js")
+    dest = file("${buildDir}/${project.name}.js")
+}
+
+artifacts {
+    jsLib combinejs.dest
 }
 
 task minifyjs(type: com.eriwen.gradle.js.tasks.MinifyJsTask) {
     source = combinejs
-    dest = file("${buildDir}/all-min.js")
+    dest = file("${buildDir}/${project.name}-min.js")
     closure {
         warningLevel = 'QUIET'
     }
@@ -35,5 +43,5 @@ task minifyjs(type: com.eriwen.gradle.js.tasks.MinifyJsTask) {
 
 task gzipjs(type: com.eriwen.gradle.js.tasks.GzipJsTask) {
     source = minifyjs
-    dest = file("${buildDir}/all-min.js.gz")
+    dest = file("${buildDir}/${project.name}-min.js.gz")
 }
