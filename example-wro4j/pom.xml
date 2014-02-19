@@ -9,6 +9,9 @@
   <url>http://maven.apache.org</url>
   <properties>
     <wro4j.version>1.7.3 </wro4j.version>
+    <angular.version>1.2.13</angular.version>
+    <jquery.version>2.1.0-2</jquery.version>
+    <bootstrap.version>2.3.0</bootstrap.version>
   </properties>
   <dependencies>
     <dependency>
@@ -27,6 +30,21 @@
       <artifactId>wro4j-extensions</artifactId>
       <version>${wro4j.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>angularjs</artifactId>
+      <version>${angular.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>jquery</artifactId>
+      <version>${jquery.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>bootstrap</artifactId>
+      <version>${bootstrap.version}</version>
+    </dependency>
     
   </dependencies>
   <build>
@@ -36,6 +54,9 @@
         <groupId>ro.isdc.wro4j</groupId>
         <artifactId>wro4j-maven-plugin</artifactId>
         <version>${wro4j.version}</version>
+        <configuration>
+           <wroManagerFactory>ro.isdc.wro.maven.plugin.manager.factory.ConfigurableWroManagerFactory</wroManagerFactory>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.mortbay.jetty</groupId>
@@ -46,10 +67,12 @@
             <stopPort>8000</stopPort>
             <reload>manual</reload>
             <webAppConfig>
-              <contextPath>/${project.name}</contextPath>
+              <contextPath>/</contextPath>
+              <!--
               <baseResource implementation="org.eclipse.jetty.util.resource.ResourceCollection">
-               <resourcesAsCSV>src/main/webapp</resourcesAsCSV>
+                <resourcesAsCSV>target/example-wro4j</resourcesAsCSV>
               </baseResource>
+              -->
             </webAppConfig>
           </configuration>
         </plugin>
