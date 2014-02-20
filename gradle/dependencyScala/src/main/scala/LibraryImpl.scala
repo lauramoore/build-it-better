@@ -4,6 +4,6 @@
  *
  * @author Marty, @date 2/9/14 8:41 PM
  */
-class Library {
-  def someLibraryMethod(): Boolean = true
+class LibraryImpl {
+  def doSomething(): Boolean = true
 }

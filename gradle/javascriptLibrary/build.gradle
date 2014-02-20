@@ -1,0 +1,47 @@
+// build file for simple JavaScript project
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.eriwen:gradle-js-plugin:1.9.0'
+    }
+}
+
+apply plugin: 'js'
+
+configurations{
+    jsLib
+}
+
+javascript.source {
+    main {
+       js {
+           srcDir = '/src/main/javascript'
+           include '*.js'
+       }
+    }
+}
+
+task combinejs(type: com.eriwen.gradle.js.tasks.CombineJsTask) {
+    source = javascript.source.main.js
+
+    dest = file("${buildDir}/${project.name}.js")
+}
+
+artifacts {
+    jsLib combinejs.dest
+}
+
+task minifyjs(type: com.eriwen.gradle.js.tasks.MinifyJsTask) {
+    source = combinejs
+    dest = file("${buildDir}/${project.name}-min.js")
+    closure {
+        warningLevel = 'QUIET'
+    }
+}
+
+task gzipjs(type: com.eriwen.gradle.js.tasks.GzipJsTask) {
+    source = minifyjs
+    dest = file("${buildDir}/${project.name}-min.js.gz")
+}
