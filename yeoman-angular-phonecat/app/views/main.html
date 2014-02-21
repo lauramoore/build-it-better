@@ -1,24 +1,9 @@
 <div class="hero-unit">
- <div class="span2">
-   <!--Sidebar content-->
- 
-   Search: <input ng-model="query">
-   Sort by:
-   <select ng-model="orderProp">
-     <option value="name">Alphabetical</option>
-     <option value="age">Newest</option>
-   </select>
- 
- </div>
-  
- <ul class="phones">
-   <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
-     {{phone.name}}
-     <p>{{phone.snippet}}</p>
-   </li>
- </ul>
+  <h1>'Allo, 'Allo!</h1>
+  <p>You now have</p>
+  <ul>
+      <li ng-repeat="thing in awesomeThings">{{thing}}</li>
+  </ul>
+  <p>installed.</p>
+  <h3>Enjoy coding! - Yeoman</h3>
 </div>
-
-
- 
- 
