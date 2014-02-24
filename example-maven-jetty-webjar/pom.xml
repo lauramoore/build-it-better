@@ -12,6 +12,7 @@
     <jquery.version>2.1.0</jquery.version>
     <bootstrap.version>2.3.0</bootstrap.version>
     <webjar.path>META-INF/resources/webjars</webjar.path>
+    <test-lib.path>${project.build.testOutputDirectory}/${webjar.path}</test-lib.path>
   </properties>
   <dependencies>
     <dependency>
@@ -77,6 +78,31 @@
           </configuration>
       </plugin>
 
+      <!-- The other thing our test driver needs is configuration runner
+           This builds it using maven resource filtering on copy -->
+      <!--
+      <plugin>
+         <artifactId>maven-resources-plugin</artifactId>
+         <version>2.6</version>
+         <executions>
+           <execution>
+              <id>prep-for-testing</id>
+              <phase>validate</phase>
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+              <configuration>
+                <outputDirectory>${project.build.testOutputDirectory}</outputDirectory>
+                 <resources>
+                    <directory>src/test/*</directory>
+                    <filtering>true</filtering>
+                 </resources>
+              </configuration>
+            </execution>
+         </executions>
+      </plugin>
+      -->
+
 
       <plugin>
         <groupId>com.github.searls</groupId>
@@ -93,11 +119,11 @@
             <jsSrcDir>src/main/webapp/js</jsSrcDir>
             <jsTestSrcDir>src/test/unit/</jsTestSrcDir>
             <preloadSources>
-              <source>${project.build.testOutputDirectory}/${webjar.path}/jquery/${jquery.version}/jquery.js</source>
-              <source>${project.build.testOutputDirectory}/${webjar.path}/angularjs/${angular.version}/angular.js</source>
-              <source>${project.build.testOutputDirectory}/${webjar.path}/angularjs/${angular.version}/angular-animate.js</source>
-              <source>${project.build.testOutputDirectory}/${webjar.path}/angularjs/${angular.version}/angular-resource.js</source>
-              <source>${project.build.testOutputDirectory}/${webjar.path}/angularjs/${angular.version}/angular-route.js</source>
+              <source>${test-lib.path}/jquery/${jquery.version}/jquery.js</source>
+              <source>${test-lib.path}/angularjs/${angular.version}/angular.js</source>
+              <source>${test-lib.path}/angularjs/${angular.version}/angular-animate.js</source>
+              <source>${test-lib.path}/angularjs/${angular.version}/angular-resource.js</source>
+              <source>${test-lib.path}/angularjs/${angular.version}/angular-route.js</source>
             </preloadSources>
           </configuration>
         </plugin>
