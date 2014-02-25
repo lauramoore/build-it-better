@@ -1,0 +1,1342 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ECONFLICT Unable to find suitable version for angular · Issue #866 · bower/bower · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
+    <meta property="fb:app_id" content="1401488693436528"/>
+
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="bower/bower" name="twitter:title" /><meta content="Hi, 
+I have strange problem with bower. 
+On my PC I run bower install and on my server with same version of bower 1.2.6 I&amp;#39;m getting
+
+bower angular#*                         validate 1.0.8 against " name="twitter:description" /><meta content="https://0.gravatar.com/avatar/86d39e0cee6de67985ce671dbe6044d1?d=https%3A%2F%2Fidenticons.github.com%2F605cb2444e91484725eee67a9415fd3c.png&amp;r=x&amp;s=400" name="twitter:image:src" />
+<meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://0.gravatar.com/avatar/86d39e0cee6de67985ce671dbe6044d1?d=https%3A%2F%2Fidenticons.github.com%2F605cb2444e91484725eee67a9415fd3c.png&amp;r=x&amp;s=400" property="og:image" /><meta content="bower/bower" property="og:title" /><meta content="https://github.com/bower/bower" property="og:url" /><meta content="Hi, 
+I have strange problem with bower. 
+On my PC I run bower install and on my server with same version of bower 1.2.6 I&#39;m getting
+
+bower angular#*                         validate 1.0.8 against git://github.com/angular/bower-angular.git#*
+bower                                  ECONFLICT Unable to find suitable version for angular
+
+
+I don&#39;t know what could cause this 
+This is how my bower.json looks like.
+
+{
+  &quot;name&quot;: &quot;project&quot;,
+  &quot;version&quot;: &quot;0.0.1&quot;,
+  &quot;devDependencies&quot;: {
+    &quot;angular&quot;: &quot;~1.2.0-rc.2&quot;,
+..." property="og:description" />
+
+    <meta name="hostname" content="github-fe133-cp1-prd.iad.github.net">
+    <meta name="ruby" content="ruby 2.1.0p0-github-tcmalloc (87c9373a41) [x86_64-linux]">
+    <link rel="assets" href="https://github.global.ssl.fastly.net/">
+    <link rel="conduit-xhr" href="https://ghconduit.com:25035/">
+    <link rel="xhr-socket" href="/_sockets" />
+
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="selected-link" value="repo_issues" data-pjax-transient />
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="6CCFE96A:52C7:9676C:5306BC61" name="octolytics-dimension-request_id" />
+    
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="azq9THZa9HhbnvBuZ/nTSvDXkPEfRDPpWBAJnTVM+rg=" name="csrf-token" />
+
+    <link href="https://github.global.ssl.fastly.net/assets/github-7cee76dba0e0294b03db8d8ab535931fac19e147.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://github.global.ssl.fastly.net/assets/github2-92eaceb8d1f851b74ac4f8026f927eb309a0b687.css" media="all" rel="stylesheet" type="text/css" />
+    
+    
+
+
+      <script crossorigin="anonymous" src="https://github.global.ssl.fastly.net/assets/frameworks-574a9489245858832a859b24d9512f49073e995a.js" type="text/javascript"></script>
+      <script async="async" crossorigin="anonymous" src="https://github.global.ssl.fastly.net/assets/github-3291e4d067ef47234f9257df5665431981c88c30.js" type="text/javascript"></script>
+      
+      <meta http-equiv="x-pjax-version" content="77a077c519e592b8231c11c1456550cd">
+
+      
+  <meta name="description" content="Hi, 
+I have strange problem with bower. 
+On my PC I run bower install and on my server with same version of bower 1.2.6 I&#39;m getting
+
+bower angular#*                         validate 1.0.8 against git://github.com/angular/bower-angular.git#*
+bower                                  ECONFLICT Unable to find suitable version for angular
+
+
+I don&#39;t know what could cause this 
+This is how my bower.json looks like.
+
+{
+  &quot;name&quot;: &quot;project&quot;,
+  &quot;version&quot;: &quot;0.0.1&quot;,
+  &quot;devDependencies&quot;: {
+    &quot;angular&quot;: &quot;~1.2.0-rc.2&quot;,
+..." />
+
+  <meta content="3709251" name="octolytics-dimension-user_id" /><meta content="bower" name="octolytics-dimension-user_login" /><meta content="5710341" name="octolytics-dimension-repository_id" /><meta content="bower/bower" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="5710341" name="octolytics-dimension-repository_network_root_id" /><meta content="bower/bower" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/bower/bower/commits/master.atom" rel="alternate" title="Recent Commits to bower:master" type="application/atom+xml" />
+
+  </head>
+
+
+  <body class="logged_out  env-production  vis-public tipsy-tooltips">
+    <div class="wrapper">
+      
+      
+      
+      
+
+
+      
+      <div class="header header-logged-out">
+  <div class="container clearfix">
+
+    <a class="header-logo-wordmark" href="https://github.com/">
+      <span class="mega-octicon octicon-logo-github"></span>
+    </a>
+
+    <div class="header-actions">
+        <a class="button primary" href="/join">Sign up</a>
+      <a class="button signin" href="/login?return_to=%2Fbower%2Fbower%2Fissues%2F866">Sign in</a>
+    </div>
+
+    <div class="command-bar js-command-bar  in-repository">
+
+      <ul class="top-nav">
+          <li class="explore"><a href="/explore">Explore</a></li>
+        <li class="features"><a href="/features">Features</a></li>
+          <li class="enterprise"><a href="https://enterprise.github.com/">Enterprise</a></li>
+          <li class="blog"><a href="/blog">Blog</a></li>
+      </ul>
+        <form accept-charset="UTF-8" action="/search" class="command-bar-form" id="top_search_form" method="get">
+
+<input type="text" data-hotkey="/ s" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off"
+    
+    
+      data-repo="bower/bower"
+      data-branch="master"
+      data-sha="9ec370b69574f7e92fa933a3c9a2cf449dbd0a2c"
+  >
+
+    <input type="hidden" name="nwo" value="bower/bower" />
+
+    <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
+      <span class="minibutton select-menu-button js-menu-target">
+        <span class="js-select-button">This repository</span>
+      </span>
+
+      <div class="select-menu-modal-holder js-menu-content js-navigation-container">
+        <div class="select-menu-modal">
+
+          <div class="select-menu-item js-navigation-item js-this-repository-navigation-item selected">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" class="js-search-this-repository" name="search_target" value="repository" checked="checked" />
+            <div class="select-menu-item-text js-select-button-text">This repository</div>
+          </div> <!-- /.select-menu-item -->
+
+          <div class="select-menu-item js-navigation-item js-all-repositories-navigation-item">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" name="search_target" value="global" />
+            <div class="select-menu-item-text js-select-button-text">All repositories</div>
+          </div> <!-- /.select-menu-item -->
+
+        </div>
+      </div>
+    </div>
+
+  <span class="octicon help tooltipped downwards" aria-label="Show command bar help">
+    <span class="octicon octicon-question"></span>
+  </span>
+
+    <input type="hidden" name="type" value="Issues" />
+
+  <input type="hidden" name="ref" value="cmdform">
+
+</form>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+    
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+
+<ul class="pagehead-actions">
+
+
+  <li>
+    <a href="/login?return_to=%2Fbower%2Fbower"
+    class="minibutton with-count js-toggler-target star-button tooltipped upwards"
+    aria-label="You must be signed in to use this feature" rel="nofollow">
+    <span class="octicon octicon-star"></span>Star
+  </a>
+
+    <a class="social-count js-social-count" href="/bower/bower/stargazers">
+      8,715
+    </a>
+
+  </li>
+
+    <li>
+      <a href="/login?return_to=%2Fbower%2Fbower"
+        class="minibutton with-count js-toggler-target fork-button tooltipped upwards"
+        aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <span class="octicon octicon-git-branch"></span>Fork
+      </a>
+      <a href="/bower/bower/network" class="social-count">
+        901
+      </a>
+    </li>
+</ul>
+
+        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="repo-label"><span>public</span></span>
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author">
+            <a href="/bower" class="url fn" itemprop="url" rel="author"><span itemprop="title">bower</span></a>
+          </span>
+          <span class="repohead-name-divider">/</span>
+          <strong><a href="/bower/bower" class="js-current-repository js-repo-home-link">bower</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="Octocat-spinner-32" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+      
+
+      <div class="repository-with-sidebar repo-container new-discussion-timeline js-new-discussion-timeline  ">
+        <div class="repository-sidebar clearfix">
+            
+
+<div class="sunken-menu vertical-right repo-nav js-repo-nav js-repository-container-pjax js-octicon-loaders">
+  <div class="sunken-menu-contents">
+    <ul class="sunken-menu-group">
+      <li class="tooltipped leftwards" aria-label="Code">
+        <a href="/bower/bower" aria-label="Code" class="js-selected-navigation-item sunken-menu-item" data-gotokey="c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_tags repo_branches /bower/bower">
+          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+        <li class="tooltipped leftwards" aria-label="Issues">
+          <a href="/bower/bower/issues" aria-label="Issues" class="selected js-selected-navigation-item sunken-menu-item js-disable-pjax" data-gotokey="i" data-selected-links="repo_issues /bower/bower/issues">
+            <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+            <span class='counter'>125</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+
+      <li class="tooltipped leftwards" aria-label="Pull Requests">
+        <a href="/bower/bower/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-gotokey="p" data-selected-links="repo_pulls /bower/bower/pulls">
+            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+            <span class='counter'>13</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+
+        <li class="tooltipped leftwards" aria-label="Wiki">
+          <a href="/bower/bower/wiki" aria-label="Wiki" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_wiki /bower/bower/wiki">
+            <span class="octicon octicon-book"></span> <span class="full-word">Wiki</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+    </ul>
+    <div class="sunken-menu-separator"></div>
+    <ul class="sunken-menu-group">
+
+      <li class="tooltipped leftwards" aria-label="Pulse">
+        <a href="/bower/bower/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="pulse /bower/bower/pulse">
+          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped leftwards" aria-label="Graphs">
+        <a href="/bower/bower/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_graphs repo_contributors /bower/bower/graphs">
+          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped leftwards" aria-label="Network">
+        <a href="/bower/bower/network" aria-label="Network" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-selected-links="repo_network /bower/bower/network">
+          <span class="octicon octicon-git-branch"></span> <span class="full-word">Network</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+              <div class="only-with-full-nav">
+                
+
+  
+
+<div class="clone-url open"
+  data-protocol-type="http"
+  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><strong>HTTPS</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/bower/bower.git" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/bower/bower.git" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url "
+  data-protocol-type="subversion"
+  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><strong>Subversion</strong> checkout URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/bower/bower" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/bower/bower" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+
+<p class="clone-options">You can clone with
+      <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a>
+      or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <span class="octicon help tooltipped upwards" aria-label="Get help on which URL is right for you.">
+    <a href="https://help.github.com/articles/which-remote-url-should-i-use">
+    <span class="octicon octicon-question"></span>
+    </a>
+  </span>
+</p>
+
+
+
+                <a href="/bower/bower/archive/master.zip"
+                   class="minibutton sidebar-button"
+                   title="Download this repository as a zip file"
+                   rel="nofollow">
+                  <span class="octicon octicon-cloud-download"></span>
+                  Download ZIP
+                </a>
+              </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+          
+<style type="text/css" media="screen">
+  span.labelstyle-129e5e, .linked-labelstyle-129e5e {  background-color: #129e5e !important;  color: #fff !important;}.labelstyle-129e5e.selected {  background-color: #129e5e !important;  color: #fff !important;}.label-select-menu .labelstyle-129e5e.selected {  background:rgba(18, 158, 94, 0.12) !important;  color: #11995b !important;}
+
+span.labelstyle-fc2929, .linked-labelstyle-fc2929 {  background-color: #fc2929 !important;  color: #fff !important;}.labelstyle-fc2929.selected {  background-color: #fc2929 !important;  color: #fff !important;}.label-select-menu .labelstyle-fc2929.selected {  background:rgba(252, 41, 41, 0.12) !important;  color: #991818 !important;}
+
+span.labelstyle-e102d8, .linked-labelstyle-e102d8 {  background-color: #e102d8 !important;  color: #fff !important;}.labelstyle-e102d8.selected {  background-color: #e102d8 !important;  color: #fff !important;}.label-select-menu .labelstyle-e102d8.selected {  background:rgba(225, 2, 216, 0.12) !important;  color: #990192 !important;}
+
+span.labelstyle-02d7e1, .linked-labelstyle-02d7e1 {  background-color: #02d7e1 !important;  color: #003033 !important;}.labelstyle-02d7e1.selected {  background-color: #02d7e1 !important;  color: #003033 !important;}.label-select-menu .labelstyle-02d7e1.selected {  background:rgba(2, 215, 225, 0.12) !important;  color: #019299 !important;}
+
+span.labelstyle-cccccc, .linked-labelstyle-cccccc {  background-color: #cccccc !important;  color: #333333 !important;}.labelstyle-cccccc.selected {  background-color: #cccccc !important;  color: #333333 !important;}.label-select-menu .labelstyle-cccccc.selected {  background:rgba(204, 204, 204, 0.12) !important;  color: #999999 !important;}
+
+span.labelstyle-84b6eb, .linked-labelstyle-84b6eb {  background-color: #84b6eb !important;  color: #1c2733 !important;}.labelstyle-84b6eb.selected {  background-color: #84b6eb !important;  color: #1c2733 !important;}.label-select-menu .labelstyle-84b6eb.selected {  background:rgba(132, 182, 235, 0.12) !important;  color: #557699 !important;}
+
+span.labelstyle-009800, .linked-labelstyle-009800 {  background-color: #009800 !important;  color: #fff !important;}.labelstyle-009800.selected {  background-color: #009800 !important;  color: #fff !important;}.label-select-menu .labelstyle-009800.selected {  background:rgba(0, 152, 0, 0.12) !important;  color: #009900 !important;}
+
+span.labelstyle-eb6420, .linked-labelstyle-eb6420 {  background-color: #eb6420 !important;  color: #fff !important;}.labelstyle-eb6420.selected {  background-color: #eb6420 !important;  color: #fff !important;}.label-select-menu .labelstyle-eb6420.selected {  background:rgba(235, 100, 32, 0.12) !important;  color: #994114 !important;}
+
+span.labelstyle-ff8187, .linked-labelstyle-ff8187 {  background-color: #ff8187 !important;  color: #33191a !important;}.labelstyle-ff8187.selected {  background-color: #ff8187 !important;  color: #33191a !important;}.label-select-menu .labelstyle-ff8187.selected {  background:rgba(255, 129, 135, 0.12) !important;  color: #994d50 !important;}
+
+span.labelstyle-e6e6e6, .linked-labelstyle-e6e6e6 {  background-color: #e6e6e6 !important;  color: #333333 !important;}.labelstyle-e6e6e6.selected {  background-color: #e6e6e6 !important;  color: #333333 !important;}.label-select-menu .labelstyle-e6e6e6.selected {  background:rgba(230, 230, 230, 0.12) !important;  color: #999999 !important;}
+
+span.labelstyle-02e10c, .linked-labelstyle-02e10c {  background-color: #02e10c !important;  color: #fff !important;}.labelstyle-02e10c.selected {  background-color: #02e10c !important;  color: #fff !important;}.label-select-menu .labelstyle-02e10c.selected {  background:rgba(2, 225, 12, 0.12) !important;  color: #019908 !important;}
+
+span.labelstyle-ededed, .linked-labelstyle-ededed {  background-color: #ededed !important;  color: #333333 !important;}.labelstyle-ededed.selected {  background-color: #ededed !important;  color: #333333 !important;}.label-select-menu .labelstyle-ededed.selected {  background:rgba(237, 237, 237, 0.12) !important;  color: #999999 !important;}
+
+span.labelstyle-cc317c, .linked-labelstyle-cc317c {  background-color: #cc317c !important;  color: #fff !important;}.labelstyle-cc317c.selected {  background-color: #cc317c !important;  color: #fff !important;}.label-select-menu .labelstyle-cc317c.selected {  background:rgba(204, 49, 124, 0.12) !important;  color: #99245c !important;}
+
+span.labelstyle-fbca04, .linked-labelstyle-fbca04 {  background-color: #fbca04 !important;  color: #332900 !important;}.labelstyle-fbca04.selected {  background-color: #fbca04 !important;  color: #332900 !important;}.label-select-menu .labelstyle-fbca04.selected {  background:rgba(251, 202, 4, 0.12) !important;  color: #997b02 !important;}
+
+span.labelstyle-d7e102, .linked-labelstyle-d7e102 {  background-color: #d7e102 !important;  color: #303300 !important;}.labelstyle-d7e102.selected {  background-color: #d7e102 !important;  color: #303300 !important;}.label-select-menu .labelstyle-d7e102.selected {  background:rgba(215, 225, 2, 0.12) !important;  color: #929901 !important;}
+
+span.labelstyle-0b02e1, .linked-labelstyle-0b02e1 {  background-color: #0b02e1 !important;  color: #fff !important;}.labelstyle-0b02e1.selected {  background-color: #0b02e1 !important;  color: #fff !important;}.label-select-menu .labelstyle-0b02e1.selected {  background:rgba(11, 2, 225, 0.30720418300653585) !important;  color: #040066 !important;}
+
+span.labelstyle-bfe5bf, .linked-labelstyle-bfe5bf {  background-color: #bfe5bf !important;  color: #2a332a !important;}.labelstyle-bfe5bf.selected {  background-color: #bfe5bf !important;  color: #2a332a !important;}.label-select-menu .labelstyle-bfe5bf.selected {  background:rgba(191, 229, 191, 0.12) !important;  color: #7f997f !important;}
+
+span.labelstyle-5319e7, .linked-labelstyle-5319e7 {  background-color: #5319e7 !important;  color: #fff !important;}.labelstyle-5319e7.selected {  background-color: #5319e7 !important;  color: #fff !important;}.label-select-menu .labelstyle-5319e7.selected {  background:rgba(83, 25, 231, 0.12) !important;  color: #361099 !important;}
+
+span.labelstyle-ffffff, .linked-labelstyle-ffffff {  background-color: #ffffff !important;  color: #333333 !important;}.labelstyle-ffffff.selected {  background-color: #ffffff !important;  color: #333333 !important;}.label-select-menu .labelstyle-ffffff.selected {  background:rgba(255, 255, 255, 0.12) !important;  color: #999999 !important;}
+
+span.labelstyle-fef2c0, .linked-labelstyle-fef2c0 {  background-color: #fef2c0 !important;  color: #333026 !important;}.labelstyle-fef2c0.selected {  background-color: #fef2c0 !important;  color: #333026 !important;}.label-select-menu .labelstyle-fef2c0.selected {  background:rgba(254, 242, 192, 0.12) !important;  color: #989173 !important;}
+</style>
+
+
+
+<div id="issues_next">
+    <div id="show_issue" class="js-issues-results">
+
+    
+
+  <div
+    id="js-discussion-header"
+    class="gh-header js-details-container js-socket-channel js-updatable-content js-issue-header issue"
+    data-channel="bower/bower:issue:19305344"
+    data-url="/bower/bower/issues/866/show_partial?partial=title">
+
+  <div class="gh-header-show">
+    <div class="gh-header-actions">
+
+        <a href="/bower/bower/issues/new" class="minibutton primary js-new-issue-button" data-hotkey="c">
+          New issue
+        </a>
+    </div>
+
+      <a class="gh-header-back js-history-back" href="/bower/bower/issues" data-hotkey="u" title="Back to Issue list">
+        <span class="mega-octicon octicon-chevron-left"></span>
+      </a>
+
+    <h1 class="gh-header-title">
+      <span class="js-issue-title">ECONFLICT Unable to find suitable version for angular</span>
+      <span class="gh-header-number">#866</span>
+    </h1>
+  </div>
+
+
+  <div class="gh-header-meta">
+      <div class="gh-header-status closed">
+        <span class="octicon octicon-issue-closed"></span>
+        Closed
+      </div>
+
+      <a href="/zajca" class="author">zajca</a> opened this <span class="noun">Issue</span> <time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-09-11T01:27:19-07:00" title="2013-09-11 01:27:19">September 11, 2013</time>
+      &middot; 14 comments
+  </div>
+</div>
+
+
+    <div id="discussion_bucket" class="tab-content">
+      <div class="discussion-sidebar">
+        
+<div id="js-discussion-stats"
+     class="discussion-stats js-socket-channel js-updatable-content"
+     data-channel="bower/bower:issue:19305344"
+     data-url="/bower/bower/issues/866/show_partial?partial=discussion_stats">
+</div>
+
+
+<div class="discussion-sidebar-item sidebar-labels">
+
+  <h3 class="discussion-sidebar-heading">
+    Labels
+  </h3>
+
+  <div class="labels css-truncate js-timeline-label-list">
+    <span class="label css-truncate-target labelstyle-5319e7" title="triage">triage</span>
+</div>
+</div>
+
+<div class="discussion-sidebar-item sidebar-milestone">
+  <div class="select-menu js-menu-container js-select-menu js-milestone-picker is-showing-clear-item is-loading" data-contents-url="/bower/bower/issues/866/show_partial?partial=milestone_select_menu">
+
+    <h3 class="discussion-sidebar-heading">
+      Milestone
+    </h3>
+
+  </div> <!-- /.select-menu -->
+
+  <span class="js-milestone-infobar-item-wrapper">
+    
+  <span class="progress-bar"><span class="progress" style="width: 27.77777777777778%">&nbsp;</span></span>
+  <a title="1.3.0" href="/bower/bower/issues?milestone=7&amp;state=open" class="milestone-name css-truncate">
+    <span class="css-truncate-target">1.3.0</span>
+  </a>
+
+  </span>
+</div>
+
+<div class="discussion-sidebar-item sidebar-assignee">
+  <div class="select-menu js-menu-container js-select-menu js-assignee-picker js-assignee-picker-next  is-loading" data-contents-url="/bower/bower/issues/866/show_partial?partial=assignee_select_menu">
+
+    <h3 class="discussion-sidebar-heading">
+      Assignee
+    </h3>
+
+  </div> <!-- /.select-menu -->
+
+  <p class="css-truncate js-assignee-infobar-item-wrapper">
+      <span class="text-muted">No one assigned</span>
+  </p>
+</div>
+
+
+
+<div class="discussion-sidebar-item">
+  
+<div id="js-users-participants" class="js-socket-channel js-updatable-content"
+    data-channel="bower/bower:issue:19305344"
+      data-url="/bower/bower/issues/866/show_partial?partial=participants"
+  >
+  <div class="pull-participation">
+
+    <h3 class="discussion-sidebar-heading">
+      7 participants
+    </h3>
+    <div class="pull-participation-avatars">
+        <a class="avatar tooltipped downwards" aria-label="zajca" href="/zajca"><img alt="Martin Zajíc" class=" js-avatar" data-user="180148" height="20" src="https://0.gravatar.com/avatar/4c0677ff0169e68a5e395354db53a000?d=https%3A%2F%2Fidenticons.github.com%2F0c11849716d3cfa3814ea4ee421f0680.png&amp;r=x&amp;s=140" width="20" /></a>
+        <a class="avatar tooltipped downwards" aria-label="satazor" href="/satazor"><img alt="André Cruz" class=" js-avatar" data-user="1017236" height="20" src="https://2.gravatar.com/avatar/da221b94a69db0390abab4c6d75496f6?d=https%3A%2F%2Fidenticons.github.com%2F2a4a53ea816c5ae5604ae3a05ebddbfe.png&amp;r=x&amp;s=140" width="20" /></a>
+        <a class="avatar tooltipped downwards" aria-label="robfletcher" href="/robfletcher"><img alt="Rob Fletcher" class=" js-avatar" data-user="95210" height="20" src="https://0.gravatar.com/avatar/1b4562cf0d2cfad0f98871827068e515?d=https%3A%2F%2Fidenticons.github.com%2F14e613272979fa4a99e01542f8c981aa.png&amp;r=x&amp;s=140" width="20" /></a>
+        <a class="avatar tooltipped downwards" aria-label="wayofspark" href="/wayofspark"><img alt="Pierre Gayvallet" class=" js-avatar" data-user="1532934" height="20" src="https://1.gravatar.com/avatar/adca2f684619aeca64ae77e343ed0879?d=https%3A%2F%2Fidenticons.github.com%2Fae445d3d7d71439c2cfe44a72e730be8.png&amp;r=x&amp;s=140" width="20" /></a>
+        <a class="avatar tooltipped downwards" aria-label="tillda" href="/tillda"><img alt="Michal Till" class=" js-avatar" data-user="636285" height="20" src="https://2.gravatar.com/avatar/6a969d63606363f77a362e2b1742ad05?d=https%3A%2F%2Fidenticons.github.com%2F7ba5d5a16f136c9075a6bcf0188848aa.png&amp;r=x&amp;s=140" width="20" /></a>
+        <a class="avatar tooltipped downwards" aria-label="eddiemonge" href="/eddiemonge"><img alt="Eddie Monge" class=" js-avatar" data-user="127535" height="20" src="https://1.gravatar.com/avatar/08a01ffbfa6e039295208f023dec0dae?d=https%3A%2F%2Fidenticons.github.com%2F02c75bc77fd4c359a4395af0cd9f8262.png&amp;r=x&amp;s=140" width="20" /></a>
+        <a class="avatar tooltipped downwards" aria-label="wibblymat" href="/wibblymat"><img alt="Mat Scales" class=" js-avatar" data-user="393358" height="20" src="https://0.gravatar.com/avatar/c2b874c38990ed90a0ed15ac33bda00f?d=https%3A%2F%2Fidenticons.github.com%2F6fa563c2ce1ceea234903aec51df12c5.png&amp;r=x&amp;s=140" width="20" /></a>
+    </div>
+  </div>
+</div>
+
+<div id="pr_contributors_box" style="display:none">
+  <h2 class="facebox-header">People participating in this issue</h2>
+  <ul class="facebox-user-list">
+    <li class="facebox-user-list-item">
+      <img alt="Martin Zajíc" class=" js-avatar" data-user="180148" height="24" src="https://0.gravatar.com/avatar/4c0677ff0169e68a5e395354db53a000?d=https%3A%2F%2Fidenticons.github.com%2F0c11849716d3cfa3814ea4ee421f0680.png&amp;r=x&amp;s=140" width="24" />
+      <a href="/zajca">zajca</a>
+    </li>
+    <li class="facebox-user-list-item">
+      <img alt="André Cruz" class=" js-avatar" data-user="1017236" height="24" src="https://2.gravatar.com/avatar/da221b94a69db0390abab4c6d75496f6?d=https%3A%2F%2Fidenticons.github.com%2F2a4a53ea816c5ae5604ae3a05ebddbfe.png&amp;r=x&amp;s=140" width="24" />
+      <a href="/satazor">satazor</a>
+    </li>
+    <li class="facebox-user-list-item">
+      <img alt="Rob Fletcher" class=" js-avatar" data-user="95210" height="24" src="https://0.gravatar.com/avatar/1b4562cf0d2cfad0f98871827068e515?d=https%3A%2F%2Fidenticons.github.com%2F14e613272979fa4a99e01542f8c981aa.png&amp;r=x&amp;s=140" width="24" />
+      <a href="/robfletcher">robfletcher</a>
+    </li>
+    <li class="facebox-user-list-item">
+      <img alt="Pierre Gayvallet" class=" js-avatar" data-user="1532934" height="24" src="https://1.gravatar.com/avatar/adca2f684619aeca64ae77e343ed0879?d=https%3A%2F%2Fidenticons.github.com%2Fae445d3d7d71439c2cfe44a72e730be8.png&amp;r=x&amp;s=140" width="24" />
+      <a href="/wayofspark">wayofspark</a>
+    </li>
+    <li class="facebox-user-list-item">
+      <img alt="Michal Till" class=" js-avatar" data-user="636285" height="24" src="https://2.gravatar.com/avatar/6a969d63606363f77a362e2b1742ad05?d=https%3A%2F%2Fidenticons.github.com%2F7ba5d5a16f136c9075a6bcf0188848aa.png&amp;r=x&amp;s=140" width="24" />
+      <a href="/tillda">tillda</a>
+    </li>
+    <li class="facebox-user-list-item">
+      <img alt="Eddie Monge" class=" js-avatar" data-user="127535" height="24" src="https://1.gravatar.com/avatar/08a01ffbfa6e039295208f023dec0dae?d=https%3A%2F%2Fidenticons.github.com%2F02c75bc77fd4c359a4395af0cd9f8262.png&amp;r=x&amp;s=140" width="24" />
+      <a href="/eddiemonge">eddiemonge</a>
+    </li>
+    <li class="facebox-user-list-item">
+      <img alt="Mat Scales" class=" js-avatar" data-user="393358" height="24" src="https://0.gravatar.com/avatar/c2b874c38990ed90a0ed15ac33bda00f?d=https%3A%2F%2Fidenticons.github.com%2F6fa563c2ce1ceea234903aec51df12c5.png&amp;r=x&amp;s=140" width="24" />
+      <a href="/wibblymat">wibblymat</a>
+    </li>
+  </ul>
+</div>
+
+
+</div>
+
+      </div>
+
+      <div class="discussion-timeline js-quote-selection-container">
+
+        <div class="js-discussion">
+          
+
+
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="/zajca"><img alt="Martin Zajíc" class="timeline-comment-avatar js-avatar" data-user="180148" height="48" src="https://0.gravatar.com/avatar/4c0677ff0169e68a5e395354db53a000?d=https%3A%2F%2Fidenticons.github.com%2F0c11849716d3cfa3814ea4ee421f0680.png&amp;r=x&amp;s=140" width="48" /></a>
+    
+<div class="timeline-comment timeline-comment-">
+  <div id="issue-19305344" class="comment js-comment js-task-list-container" data-body-version="da7e43ad44222757ed4225c252b12d88">
+      <div class="timeline-comment-header ">
+
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="/zajca" class="author">zajca</a>
+          </strong>
+
+          commented
+
+            <a href="#issue-19305344" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-09-11T01:27:19-07:00" title="2013-09-11 01:27:19">September 11, 2013</time></a>
+
+       </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>Hi, <br>
+I have strange problem with bower. <br>
+On my PC I run bower install and on my server with same version of bower 1.2.6 I'm getting</p>
+
+<pre><code>bower angular#*                         validate 1.0.8 against git://github.com/angular/bower-angular.git#*
+bower                                  ECONFLICT Unable to find suitable version for angular
+</code></pre>
+
+<p>I don't know what could cause this <br>
+This is how my bower.json looks like.</p>
+
+<pre><code>{
+  "name": "project",
+  "version": "0.0.1",
+  "devDependencies": {
+    "angular": "~1.2.0-rc.2",
+    "angular-mocks": "~1.2.0-rc.2",
+    "bootstrap": "~2.3.2",
+    "angular-bootstrap": "~0.5.0",
+    "angular-ui-router": "~0.0.1",
+    "angular-ui-utils": "~0.0.4",
+    "angular-sanitize": "~1.2.0-rc.2",
+    "angular-resource": "~1.2.0-rc.2",
+    "angularytics":"0.2.2",
+      "json2":"*",
+    "underscore":"1.5.1",
+    "restangular":"1.1.3",
+    "tinymce": "git://github.com/jozzhart/tinymce.git#4.0.0"
+  },
+  "dependencies": {}
+}
+</code></pre>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="/robfletcher"><img alt="Rob Fletcher" class="timeline-comment-avatar js-avatar" data-user="95210" height="48" src="https://0.gravatar.com/avatar/1b4562cf0d2cfad0f98871827068e515?d=https%3A%2F%2Fidenticons.github.com%2F14e613272979fa4a99e01542f8c981aa.png&amp;r=x&amp;s=140" width="48" /></a>
+    
+<div class="timeline-comment timeline-comment-">
+  <div id="issuecomment-24666284" class="comment js-comment js-task-list-container" data-body-version="d0bb0bd6b69c9b6c914393775bd3f8c6">
+      <div class="timeline-comment-header ">
+
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="/robfletcher" class="author">robfletcher</a>
+          </strong>
+
+          commented
+
+            <a href="#issuecomment-24666284" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-09-18T07:05:28-07:00" title="2013-09-18 07:05:28">September 18, 2013</time></a>
+
+       </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>I get exactly the same thing. On my local machine it offered me a menu to choose the option to resolve against – even though one of the options had <em>exactly the same</em> version string as the one I'd asked it to install. The problem is on our continuous integration server there's no way to make that selection so committing the updated bower.json to source control breaks our build.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="/satazor"><img alt="André Cruz" class="timeline-comment-avatar js-avatar" data-user="1017236" height="48" src="https://2.gravatar.com/avatar/da221b94a69db0390abab4c6d75496f6?d=https%3A%2F%2Fidenticons.github.com%2F2a4a53ea816c5ae5604ae3a05ebddbfe.png&amp;r=x&amp;s=140" width="48" /></a>
+    
+<div class="timeline-comment timeline-comment-">
+  <div id="issuecomment-24676633" class="comment js-comment js-task-list-container" data-body-version="279a06db6caf47c2379b1637c0a2ad7d">
+      <div class="timeline-comment-header ">
+
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="/satazor" class="author">satazor</a>
+          </strong>
+
+          commented
+
+            <a href="#issuecomment-24676633" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-09-18T09:02:16-07:00" title="2013-09-18 09:02:16">September 18, 2013</time></a>
+
+       </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>Those questions only appear when running in an interactive shell. Be sure to persist your choices to the <code>bower.json</code> by prefixing the choice with !.</p>
+
+<p>Subsequent installs will obey the choice you made previously.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="/satazor"><img alt="André Cruz" class="timeline-comment-avatar js-avatar" data-user="1017236" height="48" src="https://2.gravatar.com/avatar/da221b94a69db0390abab4c6d75496f6?d=https%3A%2F%2Fidenticons.github.com%2F2a4a53ea816c5ae5604ae3a05ebddbfe.png&amp;r=x&amp;s=140" width="48" /></a>
+    
+<div class="timeline-comment timeline-comment-">
+  <div id="issuecomment-24709458" class="comment js-comment js-task-list-container" data-body-version="b4bebf583e2a3b57b9304e7ae3f8ee90">
+      <div class="timeline-comment-header ">
+
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="/satazor" class="author">satazor</a>
+          </strong>
+
+          commented
+
+            <a href="#issuecomment-24709458" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-09-18T17:18:26-07:00" title="2013-09-18 17:18:26">September 18, 2013</time></a>
+
+       </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>Please let me know if persisting the resolutions solved the problem so I can close this out.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="/robfletcher"><img alt="Rob Fletcher" class="timeline-comment-avatar js-avatar" data-user="95210" height="48" src="https://0.gravatar.com/avatar/1b4562cf0d2cfad0f98871827068e515?d=https%3A%2F%2Fidenticons.github.com%2F14e613272979fa4a99e01542f8c981aa.png&amp;r=x&amp;s=140" width="48" /></a>
+    
+<div class="timeline-comment timeline-comment-">
+  <div id="issuecomment-24717946" class="comment js-comment js-task-list-container" data-body-version="f721ddf8a62028aa5474cf1b280eab66">
+      <div class="timeline-comment-header ">
+
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="/robfletcher" class="author">robfletcher</a>
+          </strong>
+
+          commented
+
+            <a href="#issuecomment-24717946" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-09-18T22:29:23-07:00" title="2013-09-18 22:29:23">September 18, 2013</time></a>
+
+       </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>I don't know how to get the resolution to persist now I've already chosen an option. I deleted all the Bower dependencies and <code>~/.bower</code> but I'm not being asked again.</p>
+
+<p>It's also not clear why there's a conflict in the first place. I haven't asked for an ambiguous version of Angular and all the dependencies in my <em>bower.json</em> file depend on the exact same version so why is the conflict there?</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="/wayofspark"><img alt="Pierre Gayvallet" class="timeline-comment-avatar js-avatar" data-user="1532934" height="48" src="https://1.gravatar.com/avatar/adca2f684619aeca64ae77e343ed0879?d=https%3A%2F%2Fidenticons.github.com%2Fae445d3d7d71439c2cfe44a72e730be8.png&amp;r=x&amp;s=140" width="48" /></a>
+    
+<div class="timeline-comment timeline-comment-">
+  <div id="issuecomment-24824331" class="comment js-comment js-task-list-container" data-body-version="bd7fb4c21c76ea771a1a6102db897ec5">
+      <div class="timeline-comment-header ">
+
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="/wayofspark" class="author">wayofspark</a>
+          </strong>
+
+          commented
+
+            <a href="#issuecomment-24824331" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-09-20T09:51:34-07:00" title="2013-09-20 09:51:34">September 20, 2013</time></a>
+
+       </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>Same problem there. Breaking our build on integration server, and no way to force the version. Everything working on local machine... any way around ?</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="/satazor"><img alt="André Cruz" class="timeline-comment-avatar js-avatar" data-user="1017236" height="48" src="https://2.gravatar.com/avatar/da221b94a69db0390abab4c6d75496f6?d=https%3A%2F%2Fidenticons.github.com%2F2a4a53ea816c5ae5604ae3a05ebddbfe.png&amp;r=x&amp;s=140" width="48" /></a>
+    
+<div class="timeline-comment timeline-comment-">
+  <div id="issuecomment-24901799" class="comment js-comment js-task-list-container" data-body-version="61b458ff542ffb18e59f8fea523d9455">
+      <div class="timeline-comment-header ">
+
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="/satazor" class="author">satazor</a>
+          </strong>
+
+          commented
+
+            <a href="#issuecomment-24901799" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-09-22T23:59:27-07:00" title="2013-09-22 23:59:27">September 22, 2013</time></a>
+
+       </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>I can't replicate. I've tried the json file above on an non-interactive shell and works. Can you guys give me a way to replicate?</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="/wayofspark"><img alt="Pierre Gayvallet" class="timeline-comment-avatar js-avatar" data-user="1532934" height="48" src="https://1.gravatar.com/avatar/adca2f684619aeca64ae77e343ed0879?d=https%3A%2F%2Fidenticons.github.com%2Fae445d3d7d71439c2cfe44a72e730be8.png&amp;r=x&amp;s=140" width="48" /></a>
+    
+<div class="timeline-comment timeline-comment-">
+  <div id="issuecomment-24903592" class="comment js-comment js-task-list-container" data-body-version="8eb853afbadf38435312053d0c9c6369">
+      <div class="timeline-comment-header ">
+
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="/wayofspark" class="author">wayofspark</a>
+          </strong>
+
+          commented
+
+            <a href="#issuecomment-24903592" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-09-23T00:51:58-07:00" title="2013-09-23 00:51:58">September 23, 2013</time></a>
+
+       </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>My conflicting json was the following : </p>
+
+<pre><code>"dependencies": {
+    "underscore":"*",
+    "momentjs":"~2.2.1",
+    "bootstrap": "~3.0.0",
+    "jquery": "~1.9.1",
+    "jquery.cookie": "*",
+    "jquery-ui": "~1.10.3",
+    "jquery-file-upload": "*",
+    "angular": "=1.2.0-rc.2",
+    "angular-route": "=1.2.0-rc.2",
+    "angular-resource": "=1.2.0-rc.2",
+    "angular-animate": "=1.2.0-rc.2",
+    "angular-cookies": "=1.2.0-rc.2",
+    "angular-i18n": "=1.2.0-rc.2",
+    "angular-bootstrap" : "*",
+    "ng-grid": "*",
+    "highcharts": "*",
+    "highcharts-ng": "*"
+},
+
+"devDependencies": {
+    "angular-mocks": "=1.2.0-rc.2",
+    "angular-scenario": "=1.2.0-rc.2"
+}
+</code></pre>
+
+<p>and the result in an interactive shell : </p>
+
+<pre><code>Unable to find a suitable version for angular, please choose one:
+1) angular#1.0.8 which resolved to 1.0.8 and has angular-scenario#1.2.0-rc.2 as dependants
+2) angular#1.2.0-rc.2 which resolved to 1.2.0-rc.2 and has angular-animate#1.2.0-rc.2, angular-cookies#1.2.0-rc.2, angular-mocks#1.2.0-rc.2, angular-resource#1.2.0-rc.2, angular-route#1.2.0-rc.2, angular-scenario#1.2.0-rc.2 as dependants
+3) angular#~1.2.0-rc.2 which resolved to 1.2.0-rc.2 and has tael-web as dependants
+4) angular#&gt;=1 which resolved to 1.2.0-rc.2 and has angular-bootstrap#0.6.0 as dependants
+5) angular#&gt;=1.0.4 which resolved to 1.2.0-rc.2 and has highcharts-ng#0.0.2 as dependants 
+</code></pre>
+
+<p>But this is very strange because bower seems to think angular-scenario 1.2.0-rc.2 depends on angular 1.0.8.. which is totally false ( just check to repository )...</p>
+
+<p>Is there any caching of any kind when resolving / updating dependencies ?</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="/satazor"><img alt="André Cruz" class="timeline-comment-avatar js-avatar" data-user="1017236" height="48" src="https://2.gravatar.com/avatar/da221b94a69db0390abab4c6d75496f6?d=https%3A%2F%2Fidenticons.github.com%2F2a4a53ea816c5ae5604ae3a05ebddbfe.png&amp;r=x&amp;s=140" width="48" /></a>
+    
+<div class="timeline-comment timeline-comment-">
+  <div id="issuecomment-25286373" class="comment js-comment js-task-list-container" data-body-version="6a1e81eb26c89a6ce7fa679ba25142fb">
+      <div class="timeline-comment-header ">
+
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="/satazor" class="author">satazor</a>
+          </strong>
+
+          commented
+
+            <a href="#issuecomment-25286373" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-09-27T17:39:59-07:00" title="2013-09-27 17:39:59">September 27, 2013</time></a>
+
+       </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p><a href="https://github.com/wayofspark" class="user-mention">@wayofspark</a> no conflict was produced when installing the dependencies you listed:</p>
+
+<pre><code>bower angular-route#=1.2.0-rc.2          install angular-route#1.2.0-rc.2
+bower angular-animate#=1.2.0-rc.2        install angular-animate#1.2.0-rc.2
+bower angular-resource#=1.2.0-rc.2       install angular-resource#1.2.0-rc.2
+bower angular-cookies#=1.2.0-rc.2        install angular-cookies#1.2.0-rc.2
+bower jquery.cookie#*                    install jquery.cookie#1.3.1
+bower jquery-file-upload#*               install jquery-file-upload#8.8.5
+bower jquery#~1.9.1                      install jquery#1.9.1
+bower angular-bootstrap#*                install angular-bootstrap#0.6.0
+bower angular-i18n#=1.2.0-rc.2           install angular-i18n#1.2.0-rc.2
+bower highcharts-ng#*                    install highcharts-ng#0.0.2
+bower angular-mocks#=1.2.0-rc.2          install angular-mocks#1.2.0-rc.2
+bower angular#=1.2.0-rc.2                install angular#1.2.0-rc.2
+bower highcharts#*                       install highcharts#3.0.5
+bower angular-scenario#=1.2.0-rc.2       install angular-scenario#1.2.0-rc.2
+bower momentjs#~2.2.1                    install momentjs#2.2.1
+bower underscore#*                       install underscore#1.5.2
+bower ng-grid#*                          install ng-grid#2.0.7
+bower blueimp-canvas-to-blob#&gt;=2.0.7     install blueimp-canvas-to-blob#2.0.7
+bower jquery-ui#~1.10.3                  install jquery-ui#1.10.3
+bower blueimp-load-image#&gt;=1.9.1         install blueimp-load-image#1.9.1
+bower blueimp-tmpl#&gt;=2.3.0               install blueimp-tmpl#2.4.0
+bower bootstrap#~3.0.0                   install bootstrap#3.0.0
+</code></pre>
+
+<p>What version of bower are you guys using?</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="/tillda"><img alt="Michal Till" class="timeline-comment-avatar js-avatar" data-user="636285" height="48" src="https://2.gravatar.com/avatar/6a969d63606363f77a362e2b1742ad05?d=https%3A%2F%2Fidenticons.github.com%2F7ba5d5a16f136c9075a6bcf0188848aa.png&amp;r=x&amp;s=140" width="48" /></a>
+    
+<div class="timeline-comment timeline-comment-">
+  <div id="issuecomment-26189968" class="comment js-comment js-task-list-container" data-body-version="21515fdc65e1b2f64e7abbf9b2475f29">
+      <div class="timeline-comment-header ">
+
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="/tillda" class="author">tillda</a>
+          </strong>
+
+          commented
+
+            <a href="#issuecomment-26189968" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-10-11T20:22:12-07:00" title="2013-10-11 20:22:12">October 11, 2013</time></a>
+
+       </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>I can confirm this bug. Both running <code>bower install angular#1.2.0-rc.2</code> from console and having <code>"angular": "1.2.0-rc.2",</code> in dependencies and running <code>bower install</code> shows the question:</p>
+
+<p>Unable to find a suitable version for angular, please choose one:<br>
+    1) angular#~1.0 || ~1.1 which resolved to 1.0.8 and has angular-webstorage#0.9.3 as dependants<br>
+    2) angular#=1.2.0-rc.2 which resolved to 1.2.0-rc.2 and has angular-client as dependants<br>
+    3) angular#1.2.0-rc.2 which resolved to 1.2.0-rc.2 and has angular-mocks#1.2.0-rc.2 as dependants<br>
+    4) angular#&gt;=1 which resolved to 1.2.0-rc.2 and has angular-bootstrap#0.6.0 as dependants<br>
+    5) angular#&gt;= 1.0.6 which resolved to 1.2.0-rc.2 and has angular-ui-router#0.2.0 as dependants<br>
+    6) angular#&gt;= 1.0.2 which resolved to 1.2.0-rc.2 and has angular-ui-utils#0.0.4 as dependants</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="/eddiemonge"><img alt="Eddie Monge" class="timeline-comment-avatar js-avatar" data-user="127535" height="48" src="https://1.gravatar.com/avatar/08a01ffbfa6e039295208f023dec0dae?d=https%3A%2F%2Fidenticons.github.com%2F02c75bc77fd4c359a4395af0cd9f8262.png&amp;r=x&amp;s=140" width="48" /></a>
+    
+<div class="timeline-comment timeline-comment-">
+  <div id="issuecomment-26293719" class="comment js-comment js-task-list-container" data-body-version="bc7486ffddf1e520660dbcc826e4fe01">
+      <div class="timeline-comment-header ">
+
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="/eddiemonge" class="author">eddiemonge</a>
+          </strong>
+
+          commented
+
+            <a href="#issuecomment-26293719" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-10-14T15:19:50-07:00" title="2013-10-14 15:19:50">October 14, 2013</time></a>
+
+       </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>Working bower.json file:</p>
+
+<pre><code>{
+  "name": "app",
+  "version": "0.1.0",
+  "dependencies": {
+    "angular": "1.2.0-rc.2",
+    "angular-animate": "~1.2.0-rc.2",
+    "angular-bootstrap": "~0.6.0",
+    "angular-resource": "1.2.0-rc.2",
+    "angular-route": "1.2.0-rc.2",
+    "angular-sanitize": "1.2.0-rc.2",
+    "angular-translate": "~1.1.0",
+    "es5-shim": "&gt;=2.1.0",
+    "html5shiv": "&gt;=3.7.0",
+    "json3": "&gt;=3.2.5",
+    "normalize-css": "&gt;=2.1.3",
+    "respond": "~1.3.0",
+    "angular-loading-bar": "~0.0.4"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.2.0-rc.2",
+    "angular-scenario": "1.2.0-rc.2"
+  },
+  "resolutions": {
+    "angular": "1.2.0-rc.2"
+  }
+}
+</code></pre>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="/eddiemonge"><img alt="Eddie Monge" class="timeline-comment-avatar js-avatar" data-user="127535" height="48" src="https://1.gravatar.com/avatar/08a01ffbfa6e039295208f023dec0dae?d=https%3A%2F%2Fidenticons.github.com%2F02c75bc77fd4c359a4395af0cd9f8262.png&amp;r=x&amp;s=140" width="48" /></a>
+    
+<div class="timeline-comment timeline-comment-">
+  <div id="issuecomment-26293998" class="comment js-comment js-task-list-container" data-body-version="da93c805fa632ccb504f5ee806752b1c">
+      <div class="timeline-comment-header ">
+
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="/eddiemonge" class="author">eddiemonge</a>
+          </strong>
+
+          commented
+
+            <a href="#issuecomment-26293998" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-10-14T15:24:17-07:00" title="2013-10-14 15:24:17">October 14, 2013</time></a>
+
+       </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>using <a href="https://github.com/zajca" class="user-mention">@zajca</a> 's bower.json: <a href="https://gist.github.com/eddiemonge/94e40e659f38e9b4726c">https://gist.github.com/eddiemonge/94e40e659f38e9b4726c</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="/robfletcher"><img alt="Rob Fletcher" class="timeline-comment-avatar js-avatar" data-user="95210" height="48" src="https://0.gravatar.com/avatar/1b4562cf0d2cfad0f98871827068e515?d=https%3A%2F%2Fidenticons.github.com%2F14e613272979fa4a99e01542f8c981aa.png&amp;r=x&amp;s=140" width="48" /></a>
+    
+<div class="timeline-comment timeline-comment-">
+  <div id="issuecomment-26321694" class="comment js-comment js-task-list-container" data-body-version="45b4f3067849828fcfc801916ece1c2a">
+      <div class="timeline-comment-header ">
+
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="/robfletcher" class="author">robfletcher</a>
+          </strong>
+
+          commented
+
+            <a href="#issuecomment-26321694" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-10-15T02:48:36-07:00" title="2013-10-15 02:48:36">October 15, 2013</time></a>
+
+       </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p>I tried to upgrade to Angular 1.0.2-rc.3 this morning and got the same problem again. I manually modified the version numbers in my <em>bower.json</em> file and it now contains this:</p>
+
+<pre><code>{
+  "name": "myApp",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "1.10.2",
+    "json3": "~3.2.4",
+    "es5-shim": "~2.0.8",
+    "jsonlint": "https://github.com/zaach/jsonlint",
+    "bootstrap": "~3.0.0",
+    "momentjs": "~2.2.1",
+    "angular": "~1.2.0-rc.3",
+    "angular-route": "~1.2.0-rc.3",
+    "angular-resource": "~1.2.0-rc.3",
+    "angular-cookies": "~1.2.0-rc.3",
+    "angular-sanitize": "~1.2.0-rc.3",
+    "jquery.jqplot.1.0.8r1250.tar.gz": "https://bitbucket.org/cleonello/jqplot/downloads/jquery.jqplot.1.0.8r1250.tar.gz",
+    "jquery-smartresize": "https://github.com/louisremi/jquery-smartresize.git"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.0-rc.3",
+    "angular-scenario": "~1.2.0-rc.3"
+  }
+}
+</code></pre>
+
+<p>I then ran <code>bower install</code> and got the following output:</p>
+
+<pre><code>Unable to find a suitable version for angular, please choose one:
+    1) angular#1.2.0-rc.2 which resolved to 1.2.0-rc.2 and has angular-cookies#1.2.0-rc.3, angular-scenario#1.2.0-rc.3 as dependants
+    2) angular#1.2.0-rc.3 which resolved to 1.2.0-rc.3 and has angular-mocks#1.2.0-rc.3, angular-resource#1.2.0-rc.3, angular-route#1.2.0-rc.3, angular-sanitize#1.2.0-rc.3, angular-scenario#1.2.0-rc.3 as dependants
+    3) angular#~1.2.0-rc.3 which resolved to 1.2.0-rc.3 and has myApp as dependants
+</code></pre>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="/wibblymat"><img alt="Mat Scales" class="timeline-comment-avatar js-avatar" data-user="393358" height="48" src="https://0.gravatar.com/avatar/c2b874c38990ed90a0ed15ac33bda00f?d=https%3A%2F%2Fidenticons.github.com%2F6fa563c2ce1ceea234903aec51df12c5.png&amp;r=x&amp;s=140" width="48" /></a>
+    
+<div class="timeline-comment timeline-comment-">
+  <div id="issuecomment-26324876" class="comment js-comment js-task-list-container" data-body-version="7f44047bf7c2143722651bc6817d9c70">
+      <div class="timeline-comment-header ">
+
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="/wibblymat" class="author">wibblymat</a>
+          </strong>
+
+          commented
+
+            <a href="#issuecomment-26324876" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-10-15T03:53:29-07:00" title="2013-10-15 03:53:29">October 15, 2013</time></a>
+
+       </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p><a href="https://github.com/robfletcher" class="user-mention">@robfletcher</a> You have a genuine version conflict here. The <code>angular-cookies</code> tag for rc.3 has an out of date <code>bower.json</code> that has a version of rc.2 and depends on exactly rc.2 of angular. All of the others have an exact dependency on rc.3.</p>
+
+<p>Since the version cannot be exactly rc.2 and exactly rc.3 there is a conflict. <code>angular-cookies</code> needs to have an up to date bower.json.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="timeline-comment-wrapper js-comment-container">
+    <a href="/robfletcher"><img alt="Rob Fletcher" class="timeline-comment-avatar js-avatar" data-user="95210" height="48" src="https://0.gravatar.com/avatar/1b4562cf0d2cfad0f98871827068e515?d=https%3A%2F%2Fidenticons.github.com%2F14e613272979fa4a99e01542f8c981aa.png&amp;r=x&amp;s=140" width="48" /></a>
+    
+<div class="timeline-comment timeline-comment-">
+  <div id="issuecomment-26325210" class="comment js-comment js-task-list-container" data-body-version="c94c0b880297d0dbce464c3fb2e871cd">
+      <div class="timeline-comment-header ">
+
+
+        <div class="timeline-comment-header-text">
+          <strong>
+            <a href="/robfletcher" class="author">robfletcher</a>
+          </strong>
+
+          commented
+
+            <a href="#issuecomment-26325210" class="timestamp"><time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2013-10-15T04:00:04-07:00" title="2013-10-15 04:00:04">October 15, 2013</time></a>
+
+       </div>
+      </div>
+
+    <div class="comment-content">
+
+      <div class="edit-comment-hide">
+        <div class="comment-body markdown-body markdown-format js-comment-body">
+            <p><a href="https://github.com/wibblymat" class="user-mention">@wibblymat</a> ah, thanks. I selected option 2 and it added this to <em>bower.json</em>:</p>
+
+<pre><code>"resolutions": {
+  "angular": "1.2.0-rc.3"
+}
+</code></pre>
+
+<p>All seems good now.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  
+
+
+
+  
+
+
+
+
+<!-- Rendered timeline since 2013-12-08 02:14:12 -->
+<div id="js-timeline-marker"
+      class="js-socket-channel js-updatable-content"
+      data-channel="bower/bower:issue:19305344"
+      data-url="/bower/bower/issues/866/show_partial?partial=timeline_marker&amp;since=1386497652"
+      data-last-modified="Sun, 08 Dec 2013 10:14:12 GMT">
+</div>
+
+
+        </div>
+
+        <div class="discussion-timeline-actions">
+            <div class="signed-out-comment">
+	<a href="/join" class="button primary" rel="nofollow">Sign up for free</a>
+	<strong>to join this conversation on GitHub</strong>.
+	Already have an account?
+	<a href="/login?return_to=%2Fbower%2Fbower%2Fissues%2F866" rel="nofollow">Sign in to comment</a>
+</div>
+
+        </div>
+      </div><!-- /.discussion-timeline -->
+
+    </div><!-- /#discussion_bucket -->
+    <div class="clear"></div>
+  </div>
+
+</div>
+
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="http://developer.github.com">API</a></li>
+      <li><a href="http://training.github.com">Training</a></li>
+      <li><a href="http://shop.github.com">Shop</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+
+    </ul>
+
+    <a href="/">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>&copy; 2014 <span title="0.06212s from github-fe133-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="/site/terms">Terms</a></li>
+        <li><a href="/site/privacy">Privacy</a></li>
+        <li><a href="/security">Security</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-fullscreen-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
+          <div class="suggester-container">
+              <div class="suggester fullscreen-suggester js-navigation-container" id="fullscreen_suggester"
+                 data-url="/bower/bower/suggestions/issue/19305344">
+              </div>
+          </div>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped leftwards" aria-label="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped leftwards"
+      aria-label="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-remove-close close js-ajax-error-dismiss"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+  </body>
+</html>
+

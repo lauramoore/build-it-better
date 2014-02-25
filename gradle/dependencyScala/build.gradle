@@ -9,6 +9,7 @@
 
 // Apply the scala plugin to add support for Scala
 apply plugin: 'scala'
+//defaults (main, test) sourceset, configuraiton
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -18,7 +19,8 @@ repositories {
 }
 
 configurations{
-    api
+    api 
+    //this is a new special sourceset so can be referened as dependency
 }
 
 
@@ -27,6 +29,7 @@ configurations{
 // artifacts
 sourceSets {
     api
+    //this is a new special sourceset so can be referened as dependency
 }
 
 // In this section you declare the dependencies for your production and test code
@@ -39,19 +42,19 @@ dependencies {
     testCompile 'junit:junit:4.11'
     testCompile 'org.scalatest:scalatest_2.10:2.0'
 }
-
+//this takes the impl meat in to it's own jar
 task implJar (type: Jar, dependsOn: compileScala) {
     from sourceSets.main.output
 }
-
+//limited to sources from the api sourceset  
 task apiJar (type: Jar, dependsOn: compileApiScala) {
     from sourceSets.api.output
     baseName "${project.name}-api"
 }
-
+//two jar artifacts,. wouldn't need to declare this except the special stuff
 artifacts {
     api apiJar
 }
-
+//this line links in the two artifact builds to the default output task
 build.dependsOn apiJar, implJar
 

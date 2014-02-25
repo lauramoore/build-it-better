@@ -1,0 +1,47 @@
+Marty's notes on Gradle:
+
+- ./gradlew  = wrapper entry point to application. 
+-- pulls in dependencies, plugins, etc.
+is equivalent to mvn command
+downloads gradle itself
+
+Initialization:
+- builds: build source (and local info)
+- configuration pass: task graph
+- executes
+the lifecycle that runs the tasks and produces output.
+
+smarter guys figured out all the ordering 
+
+SimpleJava build.gradle = simplest possible 9 lines of configuration.
+- lots of standard defaults set, and so you can run by convention.
+
+task artifacts : consumable by other projects (build/lib)
+projects that depend on other artifacts : 
+settings.gradle  :  multi-module pom (sub directories)  or any path....
+and in each module:
+ - dependencies will specify projects.
+ - independent artifacts,  gradle cache...  multimodule state:  file dependency instead 
+ of repo dependency (file system, other projects , repo)
+ 
+ progrmatically command lien build-dev=true switches all to local file dependencies.
+ + mode for latest...
+ 
+ sourcesets
+  - api (public)
+  - impl
+  dependencybuild
+  
+  
+Mixin tasks - buildSrc can add "Actions" to any task or class of tasks.  
+
+Real life success with gradle:
+ - 70 modules (subprojects)
+ - 12 applications
+ - 4 channels (including reskins)
+ 
+ Ant deep import (ant is a first class lang) - import and existing ant script: now they are 
+ gradle tasks...  including decoration, extension.
+ 
+ But no MOJO plugins,  limited maven plugins !!!!
+ 
