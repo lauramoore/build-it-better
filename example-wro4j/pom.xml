@@ -54,9 +54,17 @@
         <groupId>ro.isdc.wro4j</groupId>
         <artifactId>wro4j-maven-plugin</artifactId>
         <version>${wro4j.version}</version>
-        <configuration>
+        <executions>
+          <execution>
+             <phase>compile</phase>
+             <goals>
+                <goal>run</goal>
+              </goals>
+          </execution>
+        </executions>
+        <!--        <configuration>
            <wroManagerFactory>ro.isdc.wro.maven.plugin.manager.factory.ConfigurableWroManagerFactory</wroManagerFactory>
-        </configuration>
+        </configuration> -->
       </plugin>
       <plugin>
         <groupId>org.mortbay.jetty</groupId>

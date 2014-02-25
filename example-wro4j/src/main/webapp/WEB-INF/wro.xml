@@ -1,0 +1,12 @@
+<groups xmlns="http://www.isdc.ro/wro">
+  <group name="phonecat">
+    <js>/js/*.js</js>
+    <js>/js/**/*.js</js>
+  </group>
+  <group name="angular">
+    <js>/bower_components/angular/angular.js</js>
+    <js>/bower_components/angular-route/angular-route.js</js>
+    <js>/bower_components/angular-animate/angular-animate.js</js>
+    <js>/bower_components/angular-resource/angular-resource.js</js>
+  </group>
+</groups>
