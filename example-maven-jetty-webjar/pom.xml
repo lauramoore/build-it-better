@@ -121,6 +121,7 @@
             <preloadSources>
               <source>${test-lib.path}/jquery/${jquery.version}/jquery.js</source>
               <source>${test-lib.path}/angularjs/${angular.version}/angular.js</source>
+              <source>${test-lib.path}/angularjs/${angular.version}/angular-mocks.js</source>
               <source>${test-lib.path}/angularjs/${angular.version}/angular-animate.js</source>
               <source>${test-lib.path}/angularjs/${angular.version}/angular-resource.js</source>
               <source>${test-lib.path}/angularjs/${angular.version}/angular-route.js</source>
